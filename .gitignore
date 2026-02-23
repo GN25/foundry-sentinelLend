@@ -1,0 +1,30 @@
+# Environment
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Node / pnpm
+node_modules/
+pnpm-lock.yaml
+
+# Build artifacts
+bot/dist/
+frontend/.next/
+frontend/out/
+
+# Foundry artifacts (root and contracts workspace)
+cache/
+out/
+contracts/cache/
+contracts/out/
+contracts/broadcast/
+contracts/coverage/
+
+# Temporary files
+*.log
+*.tmp
+
+# Keep docs tracked; only ignore generated image exports if needed
+# docs/**/*.png

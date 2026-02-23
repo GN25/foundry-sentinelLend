@@ -1,0 +1,16 @@
+{
+  "name": "sentinel-lend-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Hiring-optimized DeFi lending protocol monorepo",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

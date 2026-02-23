@@ -1,0 +1,9 @@
+flowchart LR
+  Supplier -->|Supply Asset| Market
+  Borrower -->|Deposit Collateral| Market
+  Market -->|Compute Health Factor| RiskMath
+  Oracle -->|Price Feed| OracleRouter
+  OracleRouter --> Market
+  Market -->|Unhealthy Position| LiquidationEngine
+  KeeperBot -->|Execute Liquidation| LiquidationEngine
+  Guardian -->|Pause Controls| Market

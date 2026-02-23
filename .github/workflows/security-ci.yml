@@ -1,0 +1,28 @@
+name: Security CI
+
+on:
+  push:
+    paths:
+      - "contracts/**"
+      - ".github/workflows/security-ci.yml"
+  pull_request:
+    paths:
+      - "contracts/**"
+      - ".github/workflows/security-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  security-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+      - name: Baseline security gate
+        run: |
+          cd contracts
+          forge build
+          echo "Slither/Echidna integration planned for Day 4."

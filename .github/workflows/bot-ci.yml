@@ -1,0 +1,37 @@
+name: Bot CI
+
+on:
+  push:
+    paths:
+      - "bot/**"
+      - "pnpm-workspace.yaml"
+      - "package.json"
+      - ".github/workflows/bot-ci.yml"
+  pull_request:
+    paths:
+      - "bot/**"
+      - "pnpm-workspace.yaml"
+      - "package.json"
+      - ".github/workflows/bot-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install
+        run: pnpm --filter @sentinel-lend/bot install
+      - name: Build
+        run: pnpm --filter @sentinel-lend/bot build
+      - name: Test
+        run: pnpm --filter @sentinel-lend/bot test

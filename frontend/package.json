@@ -1,0 +1,11 @@
+{
+  "name": "@sentinel-lend/frontend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "echo 'frontend build placeholder (Day 1)'",
+    "test": "node --test",
+    "lint": "echo 'add eslint in day 2'",
+    "format": "echo 'add prettier in day 2'"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "filter_paths": "lib|test/mocks",
+  "exclude_low": false,
+  "exclude_medium": false,
+  "exclude_high": false
+}

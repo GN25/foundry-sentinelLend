@@ -1,0 +1,15 @@
+{
+  "name": "@sentinel-lend/bot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test",
+    "lint": "echo 'add eslint in day 2'",
+    "format": "echo 'add prettier in day 2'"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
